@@ -1,16 +1,22 @@
-# flutter_action_menu
+# Flutter Action Menu
 
-Animated action menu with rubber band effect built with Flutter
+Animated action menu built with Flutter. Includes effects like the rubber band effect, different gesture handling, and haptic feedback that come together for a great interactive feel.
 
-## Getting Started
+🔗 [Original concept](https://twitter.com/jmtrivedi/status/1610017363218563072)
 
-This project is a starting point for a Flutter application.
+## The Rubber Band Effect
 
-A few resources to get you started if this is your first Flutter project:
+The pull and stretch effect in the menu is similar to the sound & brightness sliders in the iOS control center.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The effect can be achieved by adjusting the scaling and positioning by the amount of stretch value, with a logarithmic function applied to it. With #Flutter this was done with a `Transform.scale` widget that increases `scaleY`, decreases `scaleX`, and switches the `alignment` between top and bottom based on the direction of the stretching.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🔗 [The standalone widget for this rubber band slider.](https://github.com/Roaa94/flutter_action_menu/blob/main/lib/rubber_band_slider.dart)
+
+## Overlay Menu
+The overlay menu is achieved using an `OverlayPortal` widget with a combination of `CompositedTransformTarget` and `CompositedTransformFollower` widgets to correctly position the overlay
+
+## Gestures and Haptics
+
+With different handling of gestures, using a `Listener` and a `GestureDetector` widget, both swapping up and long pressing on the action button open the overlay, with a spring effect on the long press gesture.
+
+Additionally, different levels of #HapticFeedback impacts are applied for an enhanced feel of responsiveness to user touch ✨ (highly recommend you run it and experience it yourself!)
