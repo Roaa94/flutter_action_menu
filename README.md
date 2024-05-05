@@ -63,19 +63,19 @@ With those gestures, different levels of #HapticFeedback impacts are applied for
 import 'package: flutter/services.dart';
 
 // Very light vibration
-HapticFeedback. lightImpact);
+HapticFeedback.lightImpact);
 
 // Light vibration
-HapticFeedback. mediumImpact);
+HapticFeedback.mediumImpact);
 
 // Medium vibration
-HapticFeedback. heavyImpact);
+HapticFeedback.heavyImpact);
  
 // Long and high vibration
-HapticFeedback. vibrate();
+HapticFeedback.vibrate();
 
 // Very short and light vibration
 // Used to indicate UI changes, for example, in a Slider widget
-HapticFeedback. selectionClick();
+HapticFeedback.selectionClick();
 ```
 
